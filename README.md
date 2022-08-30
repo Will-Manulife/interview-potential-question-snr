@@ -1,6 +1,6 @@
-# React: Customer List
+# React: Country Search
 
-## Environment 
+## Environment
 
 - React Version: 16.13.1
 - Node Version: 14(LTS)
@@ -8,41 +8,63 @@
 
 ## Application Demo:
 
-![](https://hrcdn.net/s3_pub/istreet-assets/HnPUXnW8Mhml5W2AHvkNKQ/customer-list.gif)
+![](https://www.loom.com/share/b3fcbefb6df74ea184b59d3c358b8789)
 
 ## Functionality Requirements
 
 The component must have the following functionalities:
 
 - The input should initially be empty.
-- If no value is entered, clicking on the 'Add Customer' button should not do anything.
-- Clicking on the 'Add Customer' button should add the input value to the list below. For this, add `<li>{input}</li>` to the `<ul data-testid="customer-list">` element.
-- After adding the value to the list, clear the value of the input box.
-- Please note that the customer list, `<ul>` element should only be rendered if it has at least one customer added (i.e. at least one `<li>` child). So initially when app is mounted, since no customers are added, `<ul>` element should not be rendered.
-- All the values added by the button should be rendered in the list below.
+- If no value is entered, clicking on the 'Search Country' button should not do
+  anything.
+- Clicking on the 'Search Country' button should trigger an API call to
+  `https://jsonmock.hackerrank.com/api/countries?name=<name_of_country>`.
+- This API will return a paginated set of data, though we only ever need what is
+  returned in the inital call and do NOT need to access other pages of data.
+- Within the returned data is a `name` field, representing the name of the
+  country. When the API returns data, this name should be rendered as a title
+  below the input & button, using a `<h1>` tag, with a `data-testid` of
+  `country-name`.
+- Additionally, the returned data contains an array of `borders`, for each of
+  these bordering country codes, please create a `<p>` tag under the country
+  name, containing each of the bordering country codes. Each of these should
+  have a `data-testid` of `country-border`.
+- Please note that the country name and bordering countries list should should
+  only be rendered if a country has been successfully found (i.e. the API
+  returns a country with bordering countries). So initially when app is mounted,
+  since no countries have been searched, both the country name and any bordering
+  countries should not be rendered.
+- All the values rendered should be below the button.
 
 ## Testing Requirements
 
 - Input should have data-testid attribute 'app-input'.
 - Button should have data-testid attribute 'submit-button'.
-- Customer list `<ul>` should have data-testid attribute 'customer-list'.
-- Elements in the list should have data-testid attributes as 'list-item0', 'list-item1', 'list-item2', 'list-item3', and so on.
+- Country name should have data-testid attribute 'country-name'.
+- Bordering country codes should have data-testid attribute 'country-border'.
 
 ## Project Specifications
 
 **Read Only Files**
+
 - src/App.test.js
 
 **Commands**
-- run: 
+
+- run:
+
 ```bash
 npm start
 ```
-- install: 
+
+- install:
+
 ```bash
 npm install
 ```
-- test: 
+
+- test:
+
 ```bash
 npm test
 ```

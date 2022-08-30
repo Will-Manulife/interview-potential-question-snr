@@ -38,9 +38,9 @@ const CountrySearch = () => {
       </section>
 
       {data && data.name && (
-        <h3 className="styled mt-50" data-testid="country-name">
+        <h1 className="styled mt-50" data-testid="country-name">
           {data.name}
-        </h3>
+        </h1>
       )}
       {data &&
         data.borders &&
