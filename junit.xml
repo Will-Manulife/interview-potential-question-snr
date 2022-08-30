@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="2.515">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-08-30T14:16:48" time="1.546" tests="5">
+    <testcase classname=" initial UI is rendered as expected" name=" initial UI is rendered as expected" time="0.039">
+    </testcase>
+    <testcase classname=" button searches country" name=" button searches country" time="0.036">
+    </testcase>
+    <testcase classname=" multiple borders load successfully" name=" multiple borders load successfully" time="0.02">
+    </testcase>
+    <testcase classname=" after searching country input has no value" name=" after searching country input has no value" time="0.01">
+    </testcase>
+    <testcase classname=" no country results on empty input" name=" no country results on empty input" time="0.06">
+    </testcase>
+  </testsuite>
+</testsuites>

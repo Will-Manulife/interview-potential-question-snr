@@ -1,15 +1,15 @@
 import React  from 'react';
 import './App.css';
-import CustomerList from './components/customer-list/index.js';
+import CountrySearch from './components/country-search/index.js';
 import 'h8k-components';
 
-const title = "Customer List";
+const title = "Country Search";
 
 function App() {
   return (
     <div>
       <h8k-navbar header={title} />
-      <CustomerList/>
+      <CountrySearch/>
     </div>
   );
 }

@@ -10,7 +10,7 @@ configuration:
   ide_config:
     default_open_files:
       - src/App.js
-      - src/components/customer-list/index.js
+      - src/components/country-search/index.js
     project_menu:
       run: npm start
       install: npm install
